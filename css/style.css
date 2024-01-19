@@ -29,6 +29,14 @@ nav {
     justify-content: center;
 }
 
+.dropbtn {
+    padding: 4px 6px 4px 6px;
+    display: none;
+    border-radius: 0;
+    border: none;
+    font-size: 22px;
+}
+
 a {
     text-decoration: none;
     color: #f0f0f0;
@@ -51,4 +59,64 @@ h1 {
     font-size: 20px;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 693px) {
+    nav {
+        justify-content: flex-end;
+        margin-right: 32px;
+    }
+
+    a{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+
+    .dropbtn {
+        background-color: #0c0c0c;
+        display: block;
+        color: #f0f0f0;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #0c0c0c;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        min-width: 150px;
+        z-index: 1;
+        right: -32px;
+    }
+    
+    .dropdown-content a {
+        color: #f0f0f0;
+        padding: 12px 24px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f0f0f0
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #0c0c0c;
+        color: #f0f0f0;
+    }
 }
